@@ -86,7 +86,7 @@ source(here("helper_functions.R")) # load helper functions
 
 ## 0.3 Set required parameters ----
 # Input data files
-htp_meta_data_file <- here("data", "HTP_Metadata_v0.5_Synapse.txt") # in future this data will be available directly from INCLUDE Data Hub
+htp_meta_data_file <- here("data", "HTP_Metadata_v0.5_Synapse.txt") # in future this data will be available directly in Cavatica
 # htp_cytokines_data_file <- here("data", "HTP_MSD_Cytokines_Synapse.txt")
 #
 # Specific to CAVATICA:
@@ -120,7 +120,7 @@ here("data/HTP_Metadata_v0.5_dictionary.txt") |> read_tsv()
 # htp_cytokines_data <- htp_cytokines_data_file |> 
 #   read_tsv()
 #   # janitor::clean_names(case = "none")
-
+#
 # Specific to CAVATICA:
 # For per sample files obtained from INCLUDE Data Hub, get file paths
 htp_cytokines_data_files <- list.files(
@@ -128,7 +128,7 @@ htp_cytokines_data_files <- list.files(
   pattern = "_MSD.tsv.gz",
   full.names = TRUE
   )
-htp_cytokines_data <- read_tsv(htp_cytokines_data_files, id = "file_path")
+htp_cytokines_data <- read_tsv(htp_cytokines_data_files, id = "file_path") # may take a few minutes
 # NOTE: suggest writing out combined file to /data so that your project is self-contained
 # subsequent analyses could then read in the combined file instead of re-reading the separate files
 #
@@ -143,7 +143,7 @@ htp_cytokines_data |> distinct(LabID) # 477 LabIDs
 
 ## 1.3 Join meta data with data type 1 and data type 2 ----
 htp_meta_cytokines_data <- htp_cytokines_data |> 
-  inner_join(htp_meta_data)
+  inner_join(htp_meta_data, join_by(LabID))
 # check number of rows returned !!!
 
 
@@ -432,6 +432,20 @@ ggsave(filename = here("plots", paste0(out_file_prefix, "sina_top_signif_by_FC",
 # ggrastr::rasterize(., layers='Point', dpi = 600, dev = "ragg_png")
 
 
+# 6 Copy Project/Results to output-files ----
+# In order to be accessible from the *Files* tab of your Cavatica Project, R
+# Projects and/or files need to be copied to `/sbgenomics/output-files/`
+# NOTE: Files copied to `/sbgenomics/output-files/` will not be accessible until after the Data Studio instance is terminated
+#
+## 6.1 Copy to `output files` using R ----
+dir.create("/sbgenomics/output-files/R_analyses")
+# by default the following will overwrite any existing files with same names
+file.copy(
+  from = here(),
+  to = "/sbgenomics/output-files/R_analyses/",
+  recursive = TRUE
+)
+#
 
 
 ################################################
