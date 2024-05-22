@@ -54,7 +54,8 @@ Account Settings > Dataset Access > INCLUDE DRS Server > Connect / Reconnect.
 
 2. You should now be in an RStudio instance.  
 
-   a. To create a new Project by cloning from Github.  
+   a. To create a new Project by cloning from Github. 
+   + 
       - Go to File > New Project... > Version Control > Git.  
       - Enter Repository URL.  
       - May want to modify Project directory name.  
