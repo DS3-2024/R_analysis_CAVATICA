@@ -16,7 +16,7 @@
 ## Pushing data from the INCLUDE Data Hub to Cavatica
 
 ### INCLUDE Data Hub
-**Connect your INCLUDE and Cavatica accounts**
+**Connect your INCLUDE and Cavatica accounts**   
 Within the Data Hub, ensure you are (still) connected to Cavatica:   
 Dashboard > Cavatica Projects > Connect. 
 >[!IMPORTANT]
