@@ -16,10 +16,11 @@
 ## Pushing data from the INCLUDE Data Hub to Cavatica
 
 ### INCLUDE Data Hub
+**Connect your INCLUDE and Cavatica accounts**
 Within the Data Hub, ensure you are (still) connected to Cavatica:   
 Dashboard > Cavatica Projects > Connect. 
 >[!IMPORTANT]
->You will need to have two-factor authentication enable for your CAVATICA account or you will get an error 
+>You will need to have two-factor authentication enabled for your Cavatica account or you will get an error 
 
 1. For this example, filter to HTP MSD data files (n = 477).  
    Data Exploration > Participant > Study Code = HTP.  
