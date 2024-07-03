@@ -17,7 +17,9 @@
 
 ### INCLUDE Data Hub
 Within the Data Hub, ensure you are (still) connected to Cavatica:   
-Dashboard > Cavatica Projects > Connect.  
+Dashboard > Cavatica Projects > Connect. 
+>[!IMPORTANT]
+>You will need to have two-factor authentication enable for your CAVATICA account or you will get an error 
 
 1. For this example, filter to HTP MSD data files (n = 477).  
    Data Exploration > Participant > Study Code = HTP.  
