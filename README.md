@@ -16,19 +16,18 @@
 ## Pushing data from the INCLUDE Data Hub to Cavatica
 
 ### INCLUDE Data Hub
-**Connect your INCLUDE and Cavatica accounts**   
+1. Connect your INCLUDE and Cavatica accounts  
 Within the Data Hub, ensure you are (still) connected to Cavatica:   
 Dashboard > Cavatica Projects > Connect. 
 >[!IMPORTANT]
 >You will need to have two-factor authentication enabled for your Cavatica account or you will get an error 
-
-1. For this example, filter to HTP MSD data files (n = 477).  
+2. For this example, filter to HTP MSD data files (n = 477).  
    Data Exploration > Participant > Study Code = HTP.  
    Data Exploration > Biospecimen > Sample Type = Plasma.  
    Data Exploration > Data File > Experimental Strategy = Multiplex Immunoassay.  
    May want to save Filter...  
-2. Select all files that you want to analyze.  
-3. Click on *Analyse in Cavatica* button.  
+3. Select all files that you want to analyze.  
+4. Click on *Analyse in Cavatica* button.  
    Select the Cavatica Project to which you want to copy files.  
    Click on Copy files.  
 
