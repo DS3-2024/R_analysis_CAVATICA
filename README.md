@@ -35,7 +35,7 @@ Dashboard > Cavatica Projects > Connect.
 Within Cavatica, ensure you are (still) connected to the INCLUDE Data Hub:  
 Account Settings > Dataset Access > INCLUDE DRS Server > Connect / Reconnect.  
 
-4. Go to the project to which you copied the files.  
+5. Go to the project to which you copied the files.  
    The copied files should now be available in the *Files* tab.  
 
 ## Using Cavatica/Data Studio
